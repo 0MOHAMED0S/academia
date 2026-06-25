@@ -1,0 +1,19 @@
+
+        body { font-family: 'Cairo', sans-serif; background: #f5f7fb; padding-top: 100px; }
+        .card-modern { border: none; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: #fff; }
+        .section-title { font-weight: 700; margin-bottom: 15px; }
+        .form-control { border-radius: 10px; }
+        .btn-primary { border-radius: 10px; padding: 8px 18px; }
+
+        @media (max-width: 768px) {
+            body { padding-top: 80px; }
+            .card-modern { border-radius: 14px; padding: 20px !important; }
+            h2.fw-bold { font-size: 1.3rem; }
+            .d-flex.justify-content-between { flex-direction: column; gap: 12px; }
+        }
+        @media (max-width: 480px) {
+            body { padding-top: 70px; }
+            .card-modern { border-radius: 10px; padding: 16px !important; }
+            h2.fw-bold { font-size: 1.1rem; }
+        }
+

@@ -1,0 +1,23 @@
+
+        body { font-family: 'Cairo', sans-serif; background: #f4f7fe; padding-top: 82px; }
+        .notif-page-card { background: #fff; border-radius: 16px; box-shadow: 0 12px 35px rgba(0,0,0,0.06); border: 1px solid #edf2f7; }
+        .notif-page-item { padding: 16px 20px; border-bottom: 1px solid #e2e8f0; transition: 0.2s; }
+        .notif-page-item:hover { background: #f8fafc; }
+        .notif-page-item.unread { border-right: 4px solid #1f2c9c; background: rgba(31,44,156,0.03); }
+        .notif-page-item:last-child { border-bottom: none; }
+        .pagination { justify-content: center; margin-top: 1.5rem; }
+
+        @media (max-width: 768px) {
+            body { padding-top: 75px; }
+            .notif-page-card { border-radius: 12px; }
+            .notif-page-card .p-4 { padding: 16px !important; }
+            .notif-page-item { padding: 12px 14px; }
+            .notif-page-item .d-flex { flex-direction: column; gap: 6px; }
+            h3.fw-bold { font-size: 1.2rem; }
+        }
+        @media (max-width: 480px) {
+            body { padding-top: 70px; }
+            .notif-page-card { border-radius: 10px; }
+            .notif-page-item { padding: 10px 12px; }
+            h3.fw-bold { font-size: 1.05rem; }
+        }

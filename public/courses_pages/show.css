@@ -1,0 +1,30 @@
+
+        body { font-family: 'Cairo', sans-serif; background: #f8f9fa; padding-top: 100px; }
+        .course-header { background: #fff; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 12px 30px rgba(0,0,0,.05); }
+        .lesson-card { transition: transform .2s; border-radius: 12px; }
+        .lesson-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.1); }
+        .roadmap-content { line-height: 1.8; }
+        .roadmap-timeline { position: relative; padding-right: 35px; }
+        .roadmap-timeline::before { content: ''; position: absolute; right: 8px; top: 5px; height: 100%; width: 2px; background: #e2e8f0; }
+        .roadmap-step { position: relative; margin-bottom: 25px; transition: all 0.3s ease; }
+        .roadmap-step::before { content: ''; position: absolute; right: -32px; top: 4px; width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 3px solid #1f2c9c; z-index: 1; transition: all 0.3s ease; }
+        .roadmap-step:last-child { margin-bottom: 0; }
+        .roadmap-step:hover::before { background: #1f2c9c; transform: scale(1.2); }
+        .roadmap-step-title { font-weight: 700; color: #1e293b; margin-bottom: 4px; display: block; }
+        .roadmap-step-desc { font-size: 0.85rem; color: #64748b; display: block; }
+
+        @media (max-width: 768px) {
+            body { padding-top: 80px; }
+            .course-header { padding: 20px; border-radius: 12px; }
+            .course-header h1 { font-size: 1.3rem; }
+            .course-header .d-flex.gap-4 { flex-wrap: wrap; gap: 8px !important; }
+            .lesson-card { border-radius: 10px; }
+            .lesson-card .d-flex { flex-direction: column; align-items: flex-start !important; gap: 10px; }
+            .lesson-card .d-flex .d-flex.gap-2 { width: 100%; justify-content: flex-start; }
+        }
+        @media (max-width: 480px) {
+            body { padding-top: 70px; }
+            .course-header { padding: 16px; border-radius: 10px; }
+            .course-header h1 { font-size: 1.1rem; }
+            .course-header .fs-5 { font-size: 0.9rem !important; }
+        }

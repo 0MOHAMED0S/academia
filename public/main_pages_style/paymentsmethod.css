@@ -1,0 +1,33 @@
+
+    *{ margin:0; padding:0; box-sizing:border-box; font-family:"Cairo",sans-serif; }
+    body{ direction:rtl; background:#f4f6f9; color: #333; }
+
+    .navbar { background: linear-gradient(90deg, #1f2c9c, #2f80ed); padding: 15px 25px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+    .navbar-brand { font-weight: 700; color: #fff !important; font-size: 1.8rem; text-decoration: none; }
+
+    .checkout-container { width: 90%; max-width: 1100px; margin: 40px auto; display: flex; gap: 30px; flex-wrap: wrap; }
+
+    /* الجزء الأيمن: ملخص الطلب */
+    .order-summary { flex: 1; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); height: fit-content; border-top: 5px solid #ffc107; }
+
+    /* الجزء الأيسر: بيانات الدفع */
+    .payment-section { flex: 2; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+    h2 { color: #1f2c9c; font-size: 22px; margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+
+    .summary-item { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 17px; }
+    .total-price { font-size: 22px; font-weight: 800; color: #1f2c9c; border-top: 2px solid #f0f0f0; padding-top: 15px; margin-top: 15px; }
+
+    .form-group { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 8px; font-weight: 600; }
+    input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
+
+    .pay-methods { margin-top: 25px; }
+    .method { display: flex; align-items: center; padding: 15px; border: 2px solid #eef2f7; border-radius: 10px; margin-bottom: 10px; cursor: pointer; transition: 0.3s; }
+    .method.active { border-color: #2f80ed; background: #f8fbff; }
+    .method i { font-size: 20px; margin-left: 10px; color: #1f2c9c; }
+
+    .pay-btn { width: 100%; background: #ffc107; color: #000; border: none; padding: 18px; border-radius: 10px; font-size: 18px; font-weight: 700; cursor: pointer; margin-top: 20px; transition: 0.3s; }
+    .pay-btn:hover { background: #e0a800; transform: translateY(-2px); }
+
+    @media (max-width: 768px) { .checkout-container { flex-direction: column-reverse; } }

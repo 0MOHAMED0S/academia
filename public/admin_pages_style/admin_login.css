@@ -1,0 +1,17 @@
+
+        body { font-family: 'Cairo', sans-serif; min-height: 100vh; background: #f4f7fe; padding-top: 100px; }
+        .login-card { max-width: 480px; margin: 50px auto; background: #fff; border-radius: 18px; padding: 30px; box-shadow: 0 18px 50px rgba(0,0,0,.08); border: 1px solid #e8eef8; }
+        .admin-icon { width: 70px; height: 70px; border-radius: 50%; background: #1f2c9c; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 18px; }
+
+        @media (max-width: 768px) {
+            body { padding-top: 80px; }
+            .login-card { margin: 30px 16px; padding: 24px; border-radius: 14px; }
+            .admin-icon { width: 60px; height: 60px; font-size: 24px; }
+            h2.fw-bold { font-size: 1.3rem; }
+        }
+        @media (max-width: 480px) {
+            body { padding-top: 70px; }
+            .login-card { margin: 20px 12px; padding: 18px; border-radius: 10px; }
+            .admin-icon { width: 54px; height: 54px; font-size: 22px; }
+            h2.fw-bold { font-size: 1.1rem; }
+        }

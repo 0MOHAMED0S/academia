@@ -1,0 +1,200 @@
+:root {
+    --main: #1f2c9c;
+    --main-light: #2f80ed;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    --primary-gradient: linear-gradient(135deg, #1f2c9c 0%, #2f80ed 100%);
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--bg);
+    padding-top: 80px;
+    color: var(--text-dark);
+}
+
+/* Page Header with sophisticated design */
+.page-header {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 100px 0;
+    border-radius: 0 0 60px 60px;
+    margin-bottom: 80px;
+    box-shadow: 0 15px 40px rgba(31, 44, 156, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 10%;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+}
+
+.page-header h1 {
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+/* Instructor Card - Premium Design */
+.instructor-card {
+    background: var(--white);
+    border-radius: 32px;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.instructor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-gradient);
+    border-radius: 32px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease;
+}
+
+.instructor-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(31, 44, 156, 0.15);
+}
+
+.instructor-photo-wrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    padding: 8px;
+    background: var(--white);
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.instructor-card:hover .instructor-photo-wrapper {
+    transform: rotate(5deg);
+}
+
+.instructor-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f1f5f9;
+}
+
+.instructor-name {
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+.instructor-title {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    padding: 4px 15px;
+    background: #f1f5f9;
+    border-radius: 20px;
+}
+
+.instructor-bio {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 200px;
+}
+
+.instructor-actions {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-instructor {
+    width: 100%;
+    border-radius: 16px;
+    font-weight: 800;
+    padding: 14px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-contact {
+    background: #f8fafc;
+    color: var(--main);
+    border: 1px solid #e2e8f0;
+}
+
+.btn-contact:hover {
+    background: var(--main);
+    color: white;
+    border-color: var(--main);
+}
+
+.btn-courses {
+    background: var(--primary-gradient);
+    color: white;
+    box-shadow: 0 8px 20px rgba(31, 44, 156, 0.2);
+}
+
+.btn-courses:hover {
+    box-shadow: 0 12px 25px rgba(31, 44, 156, 0.3);
+    transform: scale(1.02);
+}
+
+/* Decoration for grid */
+.instructors-section {
+    padding-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 70px 0;
+        border-radius: 0 0 40px 40px;
+    }
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
