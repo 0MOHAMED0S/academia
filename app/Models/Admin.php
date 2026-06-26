@@ -2,14 +2,24 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Attributes\Fillable;
-use Illuminate\Database\Eloquent\Attributes\Hidden;
+
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-#[Fillable(['name', 'email', 'password', 'role', 'permissions', 'profile_photo'])]
-#[Hidden(['password', 'remember_token'])]
 class Admin extends Authenticatable
 {
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'role',
+        'permissions',
+        'profile_photo',
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
     protected function casts(): array
     {
         return [

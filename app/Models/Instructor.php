@@ -2,16 +2,27 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Attributes\Fillable;
-use Illuminate\Database\Eloquent\Attributes\Hidden;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-#[Fillable(['name', 'email', 'google_id', 'password', 'bio', 'job_title', 'profile_photo'])]
-#[Hidden(['password', 'remember_token'])]
 class Instructor extends Authenticatable
 {
+    protected $fillable = [
+        'name',
+        'email',
+        'google_id',
+        'password',
+        'bio',
+        'job_title',
+        'profile_photo',
+    ];
+
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
     use HasFactory, Notifiable;
 
     public function courses()
